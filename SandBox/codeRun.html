@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/master.css">
+    <title>testing Responsive Design</title>
+</head>
+<body>
+    <div class="header">
+        <table class="tHeader">
+            <tr>
+                <th><a href="index.html">Home</a></th>
+                <th><a href="testingGround.html">testingGround</a></th>
+                <th><a href="Sandbox.html">Sandbox</a></th>
+                <th><a href="codeRun.html">Run Code</a></th>
+            </tr>
+        </table>
+    </div>
+    <body>
+        <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <tr>
+                <td width="50%" scope="col">&nbsp;</td>
+                <td width="50%" align="left" scope="col">
+                    <input onclick="runCode();" type="button" value="Run">
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <form>
+                        <strong>Code</strong>
+                        <textarea name="sourceCode" id="sourceCode">
+<html>
+<head>
+    <!-- this is a CSS block -->
+    <style>
+        body {color:white;}
+    </style>
+</head>
+<body>
+<!-- write your HTML here  -->
+<h1>Hello!</h1>
+<p>Write HTML, CSS or JavaScript code here and click 'Run Code'.</p>
+</body>
+</html>
+                        </textarea>
+                    </form>
+                </td>
+                <td><strong>Output</strong><iframe name="targetCode" id="targetCode"></iframe></td>
+            </tr>
+        </table>  
+        <div class="footer">
+            This is the Testing ground of Lennart Labahn Comrade-Linux
+        </div> 
+        <script type="text/javascript">
+            function runCode()
+            {
+                var content = document.getElementById('sourceCode').value;
+                var iframe = document.getElementById('targetCode');
+                iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+                iframe.document.open();
+                iframe.document.write(content);
+                iframe.document.close();
+                return false;
+            }
+            runCode();
+        </script>
+    </body>
+</html>
