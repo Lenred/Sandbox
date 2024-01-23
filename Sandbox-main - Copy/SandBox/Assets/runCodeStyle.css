@@ -1,0 +1,46 @@
+/* runCodeStyle.css */
+
+/* General Styling for Run Code Page */
+.runCodeContainer {
+    padding: 20px;
+    background-color: var(--dark); /* Using a variable from master.css */
+    color: var(--neon-blue);
+}
+
+/* Styling for the Header */
+.runCodeHeader {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--neon-pink);
+}
+
+/* Styling for the Run Button */
+.runButton {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--neon-green);
+    color: var(--dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+}
+
+.runButton:hover {
+    background-color: var(--neon-blue);
+}
+
+/* Styling for the Code Input Area */
+.codeInputArea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Styling for the Output Area */
+.outputArea {
+    border: 2px solid var(--neon-pink);
+    height: 300px; /* Adjust as needed */
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Try it editor</title>
+		<link rel="stylesheet" href="master.css">
+    
+	</head>
+    <div class="header">
+        <table class="tHeader">
+            <tr>
+                <th><a href="responDesign.html">Home</a></th>
+                <th><a href="testingGround.html">testingGround</a></th>
+                <th><a href="Sandbox.html">Sandbox</a></th>
+                <th><a href="site3.html">3.0</a></th>
+            </tr>
+        </table>
+    </div>
+    <body>
+        <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <tr>
+                <td width="50%" scope="col">&nbsp;</td>
+                <td width="50%" align="left" scope="col">
+                    <input onclick="runCode();" type="button" value="Run">
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <form>
+                        <strong>Code</strong>
+                        <textarea name="sourceCode" id="sourceCode">
+<html>
+<head>
+    <!-- this is a CSS block -->
+    <style>
+        body {color:white;}
+    </style>
+</head>
+<body>
+<!-- write your HTML here  -->
+<h1>Hello!</h1>
+<p>Write HTML, CSS or JavaScript code here and click 'Run Code'.</p>
+</body>
+</html>
+                        </textarea>
+                    </form>
+                </td>
+                <td><strong>Output</strong><iframe name="targetCode" id="targetCode"></iframe></td>
+            </tr>
+        </table>  
+        <div class="footer">
+            This is the Testing ground of Lennart Labahn Comrade-Linux
+        </div> 
+        <script type="text/javascript">
+            function runCode()
+            {
+                var content = document.getElementById('sourceCode').value;
+                var iframe = document.getElementById('targetCode');
+                iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+                iframe.document.open();
+                iframe.document.write(content);
+                iframe.document.close();
+                return false;
+            }
+            runCode();
+        </script>
+    </body>
+</html>

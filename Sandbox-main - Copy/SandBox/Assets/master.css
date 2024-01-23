@@ -1,0 +1,170 @@
+/* Cyberpunk Color Palette */
+:root {
+    --neon-pink: #ff007f;
+    --neon-blue: #00ffff;
+    --neon-green: #39ff14;
+    --dark: #111;
+    --grey-dark: #333;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--neon-blue);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    background-color: var(--grey-dark);
+    padding: 1em;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    padding: 0.5em 1em;
+    color: var(--neon-pink);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green);
+}
+
+.main {
+    margin: 1em 5%;
+    text-align: center;
+}
+
+.form {
+    margin: auto;
+    width: 50%;
+    padding: 1em;
+    background-color: var(--dark);
+    border: 1px solid var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.footer {
+    text-align: center;
+    padding: 0.5em;
+    background-color: var(--dark); /* Your chosen color */
+    color: var(--neon-pink); /* Neon color for text */
+    font-size: 0.8em;
+    margin-top: 2em;
+    border-top: 1px solid var(--neon-blue); /* Optional border */
+}
+
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+    background-color: var(--dark);
+    color: var(--neon-blue);
+    border: 1px solid var(--neon-pink);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: var(--neon-pink);
+    color: var(--dark);
+}
+
+textarea, iframe {
+    border: 2px solid var(--neon-green);
+    height: 300px; 
+    background-color: var(--dark);
+    color: var(--neon-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .form {
+        width: 80%;
+    }
+}
+/* Neon Sign Effect for H1 */
+h1 {
+    font-size: 2.5em; /* Adjust size as needed */
+    color: var(--neon-pink); /* Neon color */
+    text-shadow:
+        0 0 5px var(--neon-pink),
+        0 0 10px var(--neon-pink),
+        0 0 20px var(--neon-blue),
+        0 0 40px var(--neon-blue),
+        0 0 80px var(--neon-blue);
+}
+
+/* Styling H2 Elements */
+h2 {
+    color: var(--neon-green); /* Different neon color */
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+/* Styling Paragraphs for Readability */
+p {
+    color: var(--grey-light); /* Light color for readability */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 20px;
+}
+
+.palantirForm {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: var(--dark); /* Dark background */
+    border: 2px solid var(--neon-green); /* Neon border */
+    color: var(--neon-pink); /* Neon text color */
+    width: 60%; /* Adjust as needed */
+    text-align: center;
+}
+
+.palantirForm input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid var(--grey-light);
+    background-color: var(--dark);
+    color: var(--neon-blue);
+}
+
+.palantirForm input[type="submit"] {
+    border: 1px solid var(--neon-pink);
+    background-color: var(--dark);
+    color: var(--neon-blue);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.palantirForm input[type="submit"]:hover {
+    background-color: var(--neon-pink);
+    color: var(--dark);
+}
+
+/* Styling for the Iframe Display */
+.palantirShown {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: var(--dark);
+    border: 2px solid var(--neon-blue); /* Neon border */
+    width: 70%; /* Adjust as needed */
+}
+
+.palantirShown iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    border: none;
+}
